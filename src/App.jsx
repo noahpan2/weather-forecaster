@@ -163,7 +163,7 @@ export function App() {
                 padding: '14px 22px', borderLeft: i > 0 ? `1px solid ${P.border}` : 'none',
                 display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 4,
               }}>
-                <span style={{ fontSize: 10, fontWeight: 500, letterSpacing: '0.06em', textTransform: 'uppercase', color: P.t5, fontFamily: 'IBM Plex Mono, monospace' }}>
+                <span style={{ fontSize: 10, fontWeight: 500, letterSpacing: '0.06em', textTransform: 'uppercase', color: P.t5, fontFamily: 'IBM Plex Mono, monospace', whiteSpace: 'nowrap' }}>
                   {item.label}
                 </span>
                 <span style={{ fontSize: 18, fontWeight: 500, color: item.color, fontFamily: 'IBM Plex Mono, monospace' }}>

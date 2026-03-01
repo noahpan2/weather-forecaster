@@ -22,8 +22,8 @@ a { color: inherit; }
 
 .card { background: #FFFFFF; border: 1.5px solid #E8E6DC; border-radius: 14px; }
 .card-label {
-  font-size: 10px; font-weight: 500; letter-spacing: 0.07em;
-  text-transform: uppercase; color: #B0AEA5;
+  font-size: 16px; font-weight: 700; letter-spacing: 0.05em;
+  text-transform: uppercase; color: #141413;
   font-family: 'IBM Plex Mono', monospace;
 }
 
@@ -56,7 +56,7 @@ a { color: inherit; }
 /* 7-day row — 3 cols: day | condition | bar+labels */
 .week-row {
   display: grid;
-  grid-template-columns: 52px minmax(0, 1fr) minmax(160px, 2fr);
+  grid-template-columns: 52px 20px 1fr;
   align-items: center; gap: 12px; padding: 13px 22px;
   transition: background 0.1s;
 }
@@ -64,7 +64,7 @@ a { color: inherit; }
 .week-row + .week-row { border-top: 1px solid #F0EEE8; }
 
 /* Bar area — padding reserves space for the hugging labels */
-.bar-area { padding: 0 34px; }
+.bar-area { padding: 0 34px 0 108px; }
 
 /* Temp pill track — labels overflow it vertically, that's fine */
 .temp-track {
