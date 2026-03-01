@@ -93,6 +93,10 @@ a { color: inherit; }
   color: #B84A30; font-weight: 600;
 }
 
+@media (max-width: 480px) {
+  .bar-area { padding: 0 34px 0 24px; }
+}
+
 /* Detail grid */
 .detail-grid {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
