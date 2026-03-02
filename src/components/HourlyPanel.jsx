@@ -1,8 +1,7 @@
-import { useState } from 'react';
 import { P } from '../constants.js';
 import { blendedAt } from '../utils/hourly.js';
 import { WeatherIcon } from './WeatherIcon.jsx';
-import { HourlyChart } from './HourlyChart.jsx';
+import { PanelChart } from './PanelChart.jsx';
 
 const PERIODS = [
   { label: 'Afternoon', hours: [12,13,14,15,16,17], condition: 'Mostly Cloudy' },
@@ -12,7 +11,6 @@ const PERIODS = [
 ];
 
 export function HourlyPanel({ sources, unit, currentTime }) {
-  const [hovHour, setHovHour] = useState(null);
   const eIds = sources.filter(s => s.enabled).map(s => s.id);
 
   const periodTemp = hours => {
@@ -42,11 +40,8 @@ export function HourlyPanel({ sources, unit, currentTime }) {
       </div>
 
       {/* Chart */}
-      <div style={{ padding: '4px 16px 18px' }}>
-        <HourlyChart
-          sources={sources} unit={unit} currentTime={currentTime}
-          hovHour={hovHour} setHovHour={setHovHour}
-        />
+      <div style={{ padding: '4px 8px 8px' }}>
+        <PanelChart sources={sources} unit={unit} currentTime={currentTime} />
       </div>
     </div>
   );

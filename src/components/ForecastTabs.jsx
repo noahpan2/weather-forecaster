@@ -5,9 +5,9 @@ import { HourlyPanel } from './HourlyPanel.jsx';
 import { TomorrowPanel } from './TomorrowPanel.jsx';
 
 const TABS = [
-  { id: '10day',    label: '10 Days'     },
-  { id: '24h',      label: 'Next 24 Hrs' },
-  { id: 'tomorrow', label: 'Tomorrow'    },
+  { id: '10day',    label: '10 Days',     heading: '10-Day Outlook'  },
+  { id: '24h',      label: 'Next 24 Hrs', heading: 'Next 24 Hours'   },
+  { id: 'tomorrow', label: 'Tomorrow',    heading: 'Tomorrow'        },
 ];
 
 export function ForecastTabs({ fdays, unit, sources, currentTime }) {
@@ -41,6 +41,11 @@ export function ForecastTabs({ fdays, unit, sources, currentTime }) {
             {t.label}
           </button>
         ))}
+      </div>
+
+      {/* Heading */}
+      <div className="card-label" style={{ padding: '16px 22px 4px' }}>
+        {TABS.find(t => t.id === tab).heading}
       </div>
 
       {tab === '10day'    && <><WeekList fdays={fdays} unit={unit} /><div style={{ height: 8 }} /></>}
