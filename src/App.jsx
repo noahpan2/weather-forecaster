@@ -130,7 +130,7 @@ export function App() {
 
           {/* Condition + time label */}
           <div style={{ marginTop: 12, marginBottom: 6 }}>
-            <span style={{ fontSize: 22, fontWeight: 600, color: P.t3 }}>Mostly Cloudy</span>
+            <span style={{ fontSize: 22, fontWeight: 600, color: P.t3, fontFamily: "'Lora', Georgia, serif" }}>Mostly Cloudy</span>
           </div>
           <div style={{ fontSize: 13, fontWeight: 500, fontFamily: 'IBM Plex Mono, monospace', color: P.t4, marginBottom: 18 }}>
             {heroLabel}
