@@ -67,9 +67,15 @@ export function PanelChart({ sources, unit, currentTime }) {
   return (
     <svg viewBox={`0 0 ${W} ${H}`} style={{ width: '100%', height: 'auto', display: 'block' }}>
 
+      {/* Subtle vertical grid lines at labeled hours */}
+      {dotHours.map(h => (
+        <line key={h} x1={toX(h)} y1={pT} x2={toX(h)} y2={H - pB + 2}
+          stroke={P.border} strokeWidth="1" opacity="0.7" />
+      ))}
+
       {/* Ensemble spread band */}
       {bandPath && (
-        <path d={bandPath} fill={`${P.t1}09`} strokeWidth="0" />
+        <path d={bandPath} fill={`${P.t1}22`} strokeWidth="0" />
       )}
 
       {/* Now marker */}
