@@ -7,7 +7,7 @@ import { computeForecastDays } from './data/forecast.js';
 import { ConfidenceBadge } from './components/ConfidenceBadge.jsx';
 import { PrecipBar }       from './components/PrecipBar.jsx';
 import { HourlyChart }     from './components/HourlyChart.jsx';
-import { WeekList }        from './components/WeekList.jsx';
+import { ForecastTabs }    from './components/ForecastTabs.jsx';
 import { ExtendedChart }   from './components/ExtendedChart.jsx';
 import { HoverCard }       from './components/HoverCard.jsx';
 
@@ -164,12 +164,8 @@ export function App() {
           </div>
         </div>
 
-        {/* ══ 10-DAY OUTLOOK ══════════════════════════════════════════════════ */}
-        <div className="fu d4 card" style={{ marginBottom: 16, overflow: 'hidden' }}>
-          <div className="card-label" style={{ padding: '20px 22px 8px' }}>10-Day Outlook</div>
-          <WeekList fdays={fdays} unit={unit} />
-          <div style={{ height: 8 }} />
-        </div>
+        {/* ══ FORECAST TABS ════════════════════════════════════════════════════ */}
+        <ForecastTabs fdays={fdays} unit={unit} sources={sources} currentTime={currentTime} />
 
         {/* ══ PRECIPITATION NOWCAST ═══════════════════════════════════════════ */}
         <div className="fu d2 card" style={{ padding: '20px 22px', marginBottom: 16 }}>
