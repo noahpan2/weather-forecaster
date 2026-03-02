@@ -31,13 +31,6 @@ export function App() {
 
   const heroSpread = hovDay === null ? spreadAt(hovHour ?? currentTime, eIds, unit) : 0;
 
-  const heroLabel = hovDay !== null
-    ? `${fdays[hovDay].dayName} · ${fdays[hovDay].monthDay} — Forecast High`
-    : (() => {
-        const h  = hovHour ?? currentTime;
-        const hr = h === 0 ? 12 : h <= 12 ? h : h - 12;
-        return `${hr}:00 ${h < 12 ? 'AM' : 'PM'}`;
-      })();
 
   const stats  = dailyStats(eIds, unit);
   const todayN = normals(DOY0);
@@ -128,12 +121,9 @@ export function App() {
           </div>
         </div>
 
-          {/* Condition + time label */}
-          <div style={{ marginTop: 12, marginBottom: 6 }}>
+          {/* Condition label */}
+          <div style={{ marginTop: 12, marginBottom: 18 }}>
             <span style={{ fontSize: 22, fontWeight: 600, color: P.t3, fontFamily: "'Lora', Georgia, serif" }}>Mostly Cloudy</span>
-          </div>
-          <div style={{ fontSize: 13, fontWeight: 500, fontFamily: 'IBM Plex Mono, monospace', color: P.t4, marginBottom: 18 }}>
-            {heroLabel}
           </div>
 
           {/* Weather narrative */}
