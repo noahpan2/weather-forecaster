@@ -56,24 +56,25 @@ a { color: inherit; }
 /* 7-day row — 3 cols: day | condition | bar+labels */
 .week-row {
   display: grid;
-  grid-template-columns: 52px 20px 1fr;
+  grid-template-columns: 52px 24px 1fr 12px;
   align-items: center; gap: 12px; padding: 13px 22px;
   transition: background 0.1s;
 }
 .week-row:hover { background: rgba(0,0,0,0.015); }
 .week-row + .week-row { border-top: 1px solid #F0EEE8; }
+.week-day { font-size: 15px; }
 
 /* Bar area — padding reserves space for the hugging labels */
-.bar-area { padding: 0 34px 0 108px; }
+.bar-area { padding: 0 28px 0 108px; }
 
 /* Temp pill track — labels overflow it vertically, that's fine */
 .temp-track {
-  position: relative; height: 15px; border-radius: 4px; background: transparent;
+  position: relative; height: 10px; border-radius: 4px; background: transparent;
   overflow: visible;
 }
 .temp-pill {
   position: absolute; top: 0; bottom: 0; border-radius: 100px;
-  background: rgba(217, 119, 87, 0.8);
+  background: #1A1A18;
 }
 
 /* Lo/Hi labels — absolutely positioned at the pill's left/right edges */
@@ -85,16 +86,16 @@ a { color: inherit; }
 .bar-lo {
   transform: translate(-100%, -50%);
   padding-right: 5px;
-  color: #6A9BCC; font-weight: 500;
+  color: #4A4A44; font-weight: 500;
 }
 .bar-hi {
   transform: translateY(-50%);
   padding-left: 5px;
-  color: #B84A30; font-weight: 600;
+  color: #1A1A18; font-weight: 600;
 }
 
 @media (max-width: 480px) {
-  .bar-area { padding: 0 34px 0 24px; }
+  .bar-area { padding: 0 28px 0 24px; }
 }
 
 /* Detail grid */
