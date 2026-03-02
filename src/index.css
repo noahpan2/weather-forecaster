@@ -22,9 +22,9 @@ a { color: inherit; }
 
 .card { background: #FFFFFF; border: 1.5px solid #E8E6DC; border-radius: 14px; }
 .card-label {
-  font-size: 16px; font-weight: 700; letter-spacing: 0.05em;
-  text-transform: uppercase; color: #141413;
-  font-family: 'IBM Plex Mono', monospace;
+  font-size: 18px; font-weight: 700; letter-spacing: -0.01em;
+  color: #141413;
+  font-family: 'Playfair Display', Georgia, serif;
 }
 
 /* Unit toggle */
