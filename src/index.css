@@ -100,11 +100,15 @@ a { color: inherit; }
   .forecast-tabs-card {
     background: transparent;
     border: none;
+    border-top: 1.5px solid #E8E6DC;
     border-radius: 0;
     overflow: visible;
     margin-left: -28px;
     margin-right: -28px;
   }
+  .forecast-tabs-card .tabs-bar   { padding: 0 28px; }
+  .forecast-tabs-card .tabs-heading { padding-left: 28px; padding-right: 28px; }
+  .forecast-tabs-card .week-row   { padding-left: 28px; padding-right: 28px; }
 }
 
 /* Detail grid */

@@ -17,7 +17,7 @@ export function ForecastTabs({ fdays, unit, sources, currentTime }) {
     <div className="fu d4 card forecast-tabs-card" style={{ marginBottom: 16, overflow: 'hidden' }}>
 
       {/* Tab bar */}
-      <div style={{ display: 'flex', borderBottom: `1.5px solid ${P.border}`, padding: '0 22px' }}>
+      <div className="tabs-bar" style={{ display: 'flex', borderBottom: `1.5px solid ${P.border}`, padding: '0 22px' }}>
         {TABS.map(t => (
           <button
             key={t.id}
@@ -45,7 +45,7 @@ export function ForecastTabs({ fdays, unit, sources, currentTime }) {
       </div>
 
       {/* Heading */}
-      <div className="card-label" style={{ padding: '16px 22px 4px' }}>
+      <div className="card-label tabs-heading" style={{ padding: '16px 22px 4px' }}>
         {TABS.find(t => t.id === tab).heading}
       </div>
 
