@@ -64,6 +64,10 @@ a { color: inherit; }
 .week-row + .week-row { border-top: 1px solid #F0EEE8; }
 .week-day { font-size: 18px; }
 
+/* Tabs bar and heading horizontal padding (overridden on mobile) */
+.tabs-bar     { padding-left: 22px; padding-right: 22px; }
+.tabs-heading { padding-left: 22px; padding-right: 22px; }
+
 /* Bar area — padding reserves space for the hugging labels */
 .bar-area { padding: 0 28px 0 118px; }
 
