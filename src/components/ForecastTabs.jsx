@@ -14,7 +14,7 @@ export function ForecastTabs({ fdays, unit, sources, currentTime }) {
   const [tab, setTab] = useState('10day');
 
   return (
-    <div className="fu d4 card" style={{ marginBottom: 16, overflow: 'hidden' }}>
+    <div className="fu d4 card forecast-tabs-card" style={{ marginBottom: 16, overflow: 'hidden' }}>
 
       {/* Tab bar */}
       <div style={{ display: 'flex', borderBottom: `1.5px solid ${P.border}`, padding: '0 22px' }}>
