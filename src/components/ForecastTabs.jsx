@@ -36,6 +36,7 @@ export function ForecastTabs({ fdays, unit, sources, currentTime }) {
               color: tab === t.id ? P.t1 : P.t4,
               cursor: 'pointer',
               transition: 'color 0.15s',
+              whiteSpace: 'nowrap',
             }}
           >
             {t.label}
