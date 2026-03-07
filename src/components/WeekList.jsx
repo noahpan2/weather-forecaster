@@ -28,7 +28,7 @@ export function WeekList({ fdays, unit }) {
             <span className="week-day" style={{ fontWeight: i < 2 ? 700 : 400, color: i === 0 ? P.t1 : P.t3 }}>
               {d.dayName}
             </span>
-            <WeatherIcon condition={d.condition} />
+            <WeatherIcon condition={d.condition} size={28} />
             <div className="bar-area">
               <div className="temp-track">
                 <div className="temp-pill" style={{ left: `${left}%`, width: `${pillW}%` }} />
