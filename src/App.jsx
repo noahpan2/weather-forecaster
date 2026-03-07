@@ -139,26 +139,24 @@ export function App() {
           )}
 
           {/* Stats strip */}
-          <div style={{
-            display: 'inline-flex', gap: 0, borderRadius: 12,
-            border: `1.5px solid ${P.border}`, overflow: 'hidden', background: P.card,
-          }}>
+          <div style={{ display: 'flex', gap: 10 }}>
             {[
-              { label: 'High',     value: stats.h !== null ? `${stats.h}°` : '—', color: P.t1    },
-              { label: 'Low',      value: stats.l !== null ? `${stats.l}°` : '—', color: P.t3    },
-              { label: 'Avg High', value: `${disp(todayN.avgH, unit)}°`,           color: P.orange },
-              { label: 'Avg Low',  value: `${disp(todayN.avgL, unit)}°`,           color: P.orange },
-            ].map((item, i) => (
+              { label: 'High & Avg', value: stats.h !== null ? `${stats.h}°` : '—', avg: `${disp(todayN.avgH, unit)}°`, color: P.t1 },
+              { label: 'Low & Avg',  value: stats.l !== null ? `${stats.l}°` : '—', avg: `${disp(todayN.avgL, unit)}°`, color: P.t3 },
+            ].map(item => (
               <div key={item.label} style={{
-                padding: '14px 22px', borderLeft: i > 0 ? `1px solid ${P.border}` : 'none',
+                padding: '14px 20px', borderRadius: 12,
+                border: `1.5px solid ${P.border}`, background: P.card,
                 display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 4,
               }}>
                 <span style={{ fontSize: 10, fontWeight: 500, letterSpacing: '0.06em', textTransform: 'uppercase', color: P.t5, fontFamily: 'IBM Plex Mono, monospace', whiteSpace: 'nowrap' }}>
                   {item.label}
                 </span>
-                <span style={{ fontSize: 18, fontWeight: 500, color: item.color, fontFamily: 'IBM Plex Mono, monospace' }}>
-                  {item.value}
-                </span>
+                <div style={{ display: 'flex', alignItems: 'baseline', gap: 6, fontFamily: 'IBM Plex Mono, monospace' }}>
+                  <span style={{ fontSize: 18, fontWeight: 500, color: item.color }}>{item.value}</span>
+                  <span style={{ fontSize: 13, color: P.t5 }}>/</span>
+                  <span style={{ fontSize: 18, fontWeight: 500, color: P.orange }}>{item.avg}</span>
+                </div>
               </div>
             ))}
           </div>
